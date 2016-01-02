@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <div id="map"></div>
+</div>
+
+@section scripts{
+    <script type="text/javascript" src="http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+    <script type="text/javascript">
+        $(function () {
+            map.initialize(ViewData["bingCredentials"]);
+        });
+    </script>
+}
